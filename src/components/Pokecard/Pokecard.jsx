@@ -14,11 +14,10 @@ import {
 
 const PokeCard = (props) => {
   const [pokemon, setPokemon] = useState([]);
+  const [pokedexCart, setPokedexCart] = useState()
 
   useEffect(() => {
-
     pegaPokemon(props.pokemon);
-
   }, [props.pokemon]);
 
   const pegaPokemon = () => {
@@ -34,10 +33,24 @@ const PokeCard = (props) => {
       });
   };
 
+  
+  const addPokedex = (id) => {
+    //acrescenta 0 p mudar o poke
+    for (let i = 0; i < pokemon.length; i++) {
+      if (pokemon[i].id === id) {
+        //copia add novos poke
+        let newPokedex = [...pokedexCart, pokemon[i]]
+        setPokedexCart(newPokedex);
+
+      }
+    }
+  }
+
   return (
     <CardContainer>
       <CardFather>
-        <h3>{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
+        <div onClick={() => console.log('clicou')}>
+        <h3 >{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>|{pokemon.types[1].type.name}</> : "")}</p>
@@ -50,8 +63,9 @@ const PokeCard = (props) => {
             <img src={pokemon.sprites.other.home.front_default} alt={pokemon.name} />
           )}
         </Imagem>
+        </div>
         <CaptureButton>
-        <img src={pokebolaTransp} />
+        <img  onClick={() => console.log("cliquei")} src={pokebolaTransp} />
         </CaptureButton>
       </CardFather>
     </CardContainer>

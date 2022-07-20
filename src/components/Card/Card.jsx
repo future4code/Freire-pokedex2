@@ -9,11 +9,11 @@ import {
   CaptureButton, 
   Stats
 } from "./CardStyles";
-
     
 const Card = (props) => {
 
   const [pokeList, setPokeList] = useState([]);
+
 
   const getAllPokeName = () => {
     axios
@@ -30,7 +30,6 @@ const Card = (props) => {
     getAllPokeName();
   }, []);
 
-
   const mapPokemons =
   pokeList &&
   pokeList.map((pokemon) => {
@@ -45,7 +44,7 @@ const Card = (props) => {
     <ContainerDetalhe>
       <ContainerScroll>
       <h4> Cards </h4>
-      <Cards>
+        <Cards>
         {mapPokemons}
         </Cards>
         </ContainerScroll>

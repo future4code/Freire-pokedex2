@@ -36,6 +36,8 @@ export const CardFather = styled.div`
     margin: 5px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
+    user-select: none;
+    pointer-events:none;
   }
 `
 
@@ -45,6 +47,8 @@ justify-content: center;
   
   img {
     width: 100%;
+    user-select: none;
+    pointer-events:none;
     
     &:hover{
     transform: scale(1.5);
@@ -60,6 +64,8 @@ export const Stats = styled.div`
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       text-transform: uppercase; 
       justify-content: space-between;
+      user-select: none;
+      pointer-events:none;
     }
 `
 
@@ -67,5 +73,7 @@ export const CaptureButton = styled.div`
 
 img { 
   width: 20%; 
+  user-select: none;
+  pointer-events:none;
 }
 `

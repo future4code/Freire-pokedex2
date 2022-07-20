@@ -22,23 +22,16 @@ const CardFather = styled.div`
   padding: 20px 15px;
   border-radius: 30px;
   transition: 200ms;
-  /* position: relative; */
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer; 
-  /* overflow: hide; */
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 
-
-
-
-  
   /* &:hover{
     transform: scale(1);} */
     &:hover {
@@ -108,7 +101,6 @@ const PokeCard = (props) => {
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>{pokemon.types[1].type.name}</> : ``)}</p>
           {/* <img src={pokebola} height={25} onClick={console.log('clicou')}/> */}
-          <img src={pokebolaTransp} height={25}/>
           {/* <button img={}>Clique</button> */}
         </Stats>
           <Imagem>
@@ -116,6 +108,7 @@ const PokeCard = (props) => {
             <img src={pokemon.sprites.other.home.front_default} alt={pokemon.name} />
           )}
         </Imagem>
+        <img src={pokebolaTransp} height={25}/>
       </CardFather>
     </CardContainer>
   );

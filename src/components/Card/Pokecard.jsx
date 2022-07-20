@@ -92,8 +92,8 @@ const PokeCard = (props) => {
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>{pokemon.types[1].type.name}</> : ``)}</p>
-          <img src={pokebola} height={25} onClick={console.log('clicou')}/>
-          {/* <img src={pokebolaTransp} height={25}/> */}
+          {/* <img src={pokebola} height={25} onClick={console.log('clicou')}/> */}
+          <img src={pokebolaTransp} height={25}/>
           {/* <button img={}>Clique</button> */}
         </Stats>
           <Imagem>

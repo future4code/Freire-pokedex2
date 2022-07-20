@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import naturesa from "../../assets/naturesa.gif";
 
 export const Container = styled.div`
   display: flex;

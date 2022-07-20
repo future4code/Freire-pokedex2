@@ -43,7 +43,7 @@ const Detail = () => {
                 <h2> #{pokemon.data?.id} </h2>
                 <h1> Altura {pokemon.data?.height} </h1>
                 <h1> Peso {pokemon.data?.weight} </h1>
-                {pokemon.data?.abilities?.map((item, index) => <h1> Habilidade º {index + 1} : {item.ability.name} </h1>)}
+                {pokemon.data?.abilities?.map((item, index) => <h1> Habilidade Âº {index + 1} : {item.ability.name} </h1>)}
                 {pokemon.data?.types.map((item) => <h1> Atributo : {item.type.name}</h1>)}
                 {pokemon.data?.forms.map((item) => <h1> Formas : {item.name}</h1>)}
               </CardDetalheN1>

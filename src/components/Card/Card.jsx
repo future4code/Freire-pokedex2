@@ -2,44 +2,54 @@ import React from "react";
 import { useState, useEffect } from "react";
 import PokeCard from "../../components/Card/Pokecard";
 import axios from "axios";
+import styled from "styled-components";
 
-const Card = () => {
+
+const Cards = styled.div`
+display: flex;
+/* flex-wrap: wrap; */
+align-items: center;
+gap: 15px;
+justify-content: center;
+
+`
+const Card = (props) => {
 
   const [pokeList, setPokeList] = useState([]);
 
-  const [pokeName, setPokeName] = useState("");
-
-  useEffect(() => {
+  const getAllPokeName = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/?limit=151")
-      .then((response) => {
-        setPokeList(response.data.results);
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000")
+      .then((res) => {
+        setPokeList(res.data.results);
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  useEffect(() => {
+    getAllPokeName();
   }, []);
 
-  const changePokeName = (event) => {
-    setPokeName(event.target.value);
-  };
+
+  const mapPokemons =
+  pokeList &&
+  pokeList.map((pokemon) => {
+    return (
+      <>
+        <PokeCard nome={pokemon.name} />
+      </>
+    );
+  });
+
 
   return (
     <div>
       <h4> Cards </h4>
-
-      <select onChange={changePokeName}>
-        <option value={""}>Nenhum</option>
-        {pokeList.map((pokemon) => {
-          return (
-            <option key={pokemon.name} value={pokemon.name}>
-              {pokemon.name}
-            </option>
-          );
-        })}
-      </select>
-
-      {pokeName && <PokeCard pokemon={pokeName} />}
+      <Cards>
+        {mapPokemons}
+        </Cards>
     </div>
   );
 };

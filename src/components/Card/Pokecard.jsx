@@ -88,7 +88,6 @@ const PokeCard = (props) => {
     <CardContainer>
       <CardFather>
         <h3>{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
-
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>{pokemon.types[1].type.name}</> : ``)}</p>

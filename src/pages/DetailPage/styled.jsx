@@ -45,7 +45,6 @@ export const Titulo = styled.div`
   img {  
     margin-top: -10vw;
     filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
-    
 }
 `;
 

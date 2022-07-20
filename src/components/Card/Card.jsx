@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const Cards = styled.div`
 display: flex;
-flex-wrap: wrap;
+/* flex-wrap: wrap; */
 align-items: center;
 gap: 15px;
 justify-content: center;
@@ -19,10 +19,9 @@ const Card = (props) => {
 
   const getAllPokeName = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=30")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000")
       .then((res) => {
         setPokeList(res.data.results);
-
       })
       .catch((err) => {
         console.log(err);

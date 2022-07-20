@@ -9,14 +9,9 @@ import styled from "styled-components";
 const HomeContainer = styled.div`
   display: flex;
   width: 100%;
-
-
-
 `
-
-
 const HomePage = () => {
-  const navigate = useNavigate();
+ const navigate = useNavigate();
 
 
   return (
@@ -33,3 +28,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

@@ -27,13 +27,10 @@ const Detail = () => {
     console.log(formValues);
     setFormValues({ ...formValues, [name]: value });
     
-
   };
 
 
   useEffect(() => { }, [formValues])
-
-
 
   console.log(pokemon);
 

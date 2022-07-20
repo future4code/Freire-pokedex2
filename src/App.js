@@ -1,14 +1,14 @@
 import React from "react";
 import { Router } from "./routes/Routes"
-import './index.css'
+import { GlobalStyles } from "./GlobalStyle";
+
 
 function App() {
   return (
-
-      <div>
+    <>
+      <GlobalStyles />
         <Router/>
-      </div>
+      </>
   );
 }
-
 export default App;

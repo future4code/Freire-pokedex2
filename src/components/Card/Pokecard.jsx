@@ -18,23 +18,38 @@ const CardFather = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: grey;
   width: 100%;
   padding: 20px 15px;
   border-radius: 30px;
   transition: 200ms;
+  /* position: relative; */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer; 
+  /* overflow: hide; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+
+
+
+
   
   /* &:hover{
     transform: scale(1);} */
     &:hover {
-      box-shadow: 1px 3px 10px 2px #FF4500;
+      box-shadow: 1px 3px 10px 2px #ff44008f;
        
   }
 
   h3{
     margin: 5px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
+    color: black;
   }
 `
 
@@ -55,13 +70,14 @@ const Stats = styled.div`
   display: flex;
   justify-content: space-around;
     p {
-      color: white;
+      color: black;
       font-size: 10px; 
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       text-transform: uppercase; 
     }
     
 `
+
 const PokeCard = (props) => {
   const [pokemon, setPokemon] = useState([]);
 
@@ -88,7 +104,6 @@ const PokeCard = (props) => {
     <CardContainer>
       <CardFather>
         <h3>{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
-
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>{pokemon.types[1].type.name}</> : ``)}</p>

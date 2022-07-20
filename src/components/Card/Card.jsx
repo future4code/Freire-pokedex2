@@ -5,23 +5,21 @@ import axios from "axios";
 import styled from "styled-components";
 
 
-
 const Cards = styled.div`
 display: flex;
 flex-wrap: wrap;
-gap: 10px;
-justify-content: space-between;
+align-items: center;
+gap: 15px;
+justify-content: center;
 
 `
 const Card = (props) => {
 
   const [pokeList, setPokeList] = useState([]);
 
-
-
   const getAllPokeName = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=28")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=30")
       .then((res) => {
         setPokeList(res.data.results);
 

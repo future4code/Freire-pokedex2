@@ -9,6 +9,9 @@ import styled from "styled-components";
 const HomeContainer = styled.div`
   display: flex;
   width: 100%;
+
+
+
 `
 
 
@@ -18,10 +21,11 @@ const HomePage = () => {
 
   return (
     <>
+     
       <h4> Home </h4>
       <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>
     <button onClick={() => goToDetailPage(navigate)}> Detail </button>
-      <HomeContainer>
+    <HomeContainer>
       <Card> </Card>
     </HomeContainer>
     </>

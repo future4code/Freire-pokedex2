@@ -5,13 +5,12 @@ import axios from "axios";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  width: 300px;
-  margin-left: 30px; 
-  margin-right: 40px; 
-  height: 400px;
   display: flex;
   justify-content: space-between;
- 
+  width: 150px;
+  height: 200px;
+  margin-left: 30px; 
+  margin-right: 40px; 
 `
 const CardFather = styled.div`
   display: flex;
@@ -19,7 +18,7 @@ const CardFather = styled.div`
   justify-content: space-around;
   background-color: grey;
   width: 100%;
-  padding: 50px 15px;
+  padding: 20px 15px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   transition: 200ms;
@@ -29,7 +28,7 @@ const CardFather = styled.div`
   }
 
   h3{
-    margin: 24px auto;
+    margin: 5px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
   }
@@ -40,7 +39,7 @@ display: inline-flex;
 justify-content: center;
   
   img {
-    width: 60%;
+    width: 100%;
 
     &:hover{
     transform: scale(1.5);

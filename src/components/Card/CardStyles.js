@@ -5,6 +5,18 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 gap: 25px;
+
+// Tentando fazer melher os pokemons automatico
+
+
+animation: is-rolar 60s linear infinite;
+
+@keyframes is-rolar {
+    to {
+      transform: translate3d(-20%, 0px, 0px);
+    }
+  }
+
 ;`
 
 export const ContainerScroll = styled.div`
@@ -12,35 +24,22 @@ export const ContainerScroll = styled.div`
     justify-content: space-between;
     margin: 2vw 2vw;
     padding-right: 15%;  
-    padding-bottom: 2%; 
+    padding-bottom: 10%; 
     overflow-x: auto; 
+    
+    
 
     ::-webkit-scrollbar{
     width: 15px;
     border: 1px solid #7cfa52;
     border-radius: 10px;
 
-    &::after{  
-    content: '';
-    pointer-events:none;
-    position:absolute; 
-    z-index: 4;
-    bottom: -4px; 
-    left: 0;
-    background: $scrollbarColor;
-    height: $scrollbarHeight;
-    border-radius: $scrollbarHeight;
-    opacity: 0;
-    width: var(--scrollWidth, 0);
-    left: var(--scrollLleft, 0);
-    transition: opacity .2s, bottom .2s;
-  }
-
-
-
+    
+    
   }
   ::-webkit-scrollbar-thumb{
     background-color:#7cfa52;
     border-radius: 10px;
+
   }`
     

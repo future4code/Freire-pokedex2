@@ -19,7 +19,9 @@ import { useEffect, useState } from "react";
 const Detail = () => {
   const navigate = useNavigate();
 
-  const NomePokemon = "Totodile"
+  // console.log(window.localStorage.setItem("IdPokemon"))
+
+  const NomePokemon = window.localStorage.getItem('IdPokemon')
 
 
   const pokemon = PokemonSearch(NomePokemon.toString().toLowerCase());
@@ -27,13 +29,6 @@ const Detail = () => {
   let Total = 0
 
   const statuLista = pokemon && pokemon.data?.stats.map((item)  => Total =  item.base_stat + Total)
-
-
-
-  console.log(pokemon);
-
-  console.log(pokemon.data)
-
 
   return (
     <div>
@@ -67,8 +62,6 @@ const Detail = () => {
             </SegundoCardDetalhe>
           </ContainerDetalhe>
         </ImagemPokemon>
-        <Voltar onClick={() => goToVoltar(navigate)}></Voltar>
-
       </Container>
     </ContainerTela>
     </div>

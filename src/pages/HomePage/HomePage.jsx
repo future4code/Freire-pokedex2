@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { goToPokedexPage, goToDetailPage } from "../../routes/coordinator";
+import { goToPokedexPage } from "../../routes/coordinator";
 import Card from "../../components/Card/Card";
 import styled from "styled-components";
 
@@ -11,9 +11,8 @@ import styled from "styled-components";
     background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg"});
 	  padding: 1%;
 	  border-radius: 25px;
-	  border: 15px #d14444 solid ;
+	  border: 15px #d14444 solid;
     margin: 6% 12% 3% 15%;
-    box-shadow: 1px 1px 15px 2px #d14444;
 ;`
 
   const HomePage = () => {
@@ -24,9 +23,7 @@ import styled from "styled-components";
     <>
     <ContainerTela>
       <h4> Home </h4>
-      <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>
-    <button onClick={() => goToDetailPage(navigate)}> Detail </button>
-    
+      <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>    
       <Card> </Card>
     </ContainerTela>
     </>

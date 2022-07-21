@@ -2,34 +2,45 @@ import styled from "styled-components";
 
 export const Cards = styled.div`
 display: flex;
+justify-content: space-between;
 align-items: center;
-gap: 30px;
-justify-content: center;
-margin-top: -18px; 
-
+gap: 25px;
 ;`
 
 export const ContainerScroll = styled.div`
-    position: absolute;
-    display: grid;
-    margin: 5vw 2vw;
+    display:grid ;
+    justify-content: space-between;
+    margin: 2vw 2vw;
     padding-right: 15%;  
     padding-bottom: 2%; 
-    align-items: center;
-    justify-content: center;
-    /* flex-direction: column; */
-    width: 52%;
-    overflow-x: auto;
-    /* position: absolute; */
-    
+    overflow-x: auto; 
 
     ::-webkit-scrollbar{
     width: 15px;
-    border: 1px solid #ff44008f;
+    border: 1px solid #7cfa52;
     border-radius: 10px;
+
+    &::after{  
+    content: '';
+    pointer-events:none;
+    position:absolute; 
+    z-index: 4;
+    bottom: -4px; 
+    left: 0;
+    background: $scrollbarColor;
+    height: $scrollbarHeight;
+    border-radius: $scrollbarHeight;
+    opacity: 0;
+    width: var(--scrollWidth, 0);
+    left: var(--scrollLleft, 0);
+    transition: opacity .2s, bottom .2s;
+  }
+
+
+
   }
   ::-webkit-scrollbar-thumb{
-    background-color:#ff4400d8;
+    background-color:#7cfa52;
     border-radius: 10px;
   }`
     

@@ -8,11 +8,12 @@ import styled from "styled-components";
     const ContainerTela = styled.div`
     height: 57vh;
     width: 70%;
-    background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg"});
+    background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg"});
 	  padding: 1%;
 	  border-radius: 25px;
-	  border: 15px #d14444 solid;
+	  border: 15px #d14444 solid ;
     margin: 6% 12% 3% 15%;
+    box-shadow: 1px 1px 15px 2px #d14444;
 ;`
 
   const HomePage = () => {

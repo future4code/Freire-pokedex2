@@ -14,7 +14,7 @@ const Card = (props) => {
 
   const getAllPokeName = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=30")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20")
       .then((res) => {
         setPokeList(res.data.results);
       })
@@ -40,7 +40,6 @@ const Card = (props) => {
   return (
     <>
       <ContainerScroll>
-      <h4> Cards </h4>
         <Cards>
         {mapPokemons}
         </Cards>

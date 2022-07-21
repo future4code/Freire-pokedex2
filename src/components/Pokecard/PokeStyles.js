@@ -3,10 +3,8 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 150px;
-  height: 200px;
-  /* /* margin-left: 50px;  */
-  /* margin-right: 20px;  */ 
+  width: 200px;
+  height: 250px;
 `
 
 export const CardFather = styled.div`
@@ -28,7 +26,7 @@ export const CardFather = styled.div`
   backdrop-filter: blur(5px);
   
     &:hover {
-      box-shadow: 1px 3px 10px 2px #ff44008f;
+      box-shadow: 1px 3px 10px 2px #cbfabb;
        
   }
 
@@ -48,11 +46,12 @@ justify-content: center;
   img {
     width: 100%;
     user-select: none;
-    pointer-events:none;
+    filter: drop-shadow(5px 5px 5px #222);
+
     
-    &:hover{
+    /* &:hover{
     transform: scale(1.5);
-  } 
+  }  */
 }
 `
 export const Stats = styled.div`

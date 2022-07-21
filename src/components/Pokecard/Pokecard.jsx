@@ -41,7 +41,6 @@ const PokeCard = (props) => {
         //copia add novos poke
         let newPokedex = [...pokedexCart, pokemon[i]]
         setPokedexCart(newPokedex);
-
       }
     }
   }

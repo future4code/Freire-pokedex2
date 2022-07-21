@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import React from "react";
 import axios from "axios";
 import pokebolaTransp from "../../assets/pokebolaTransp.png"
+import { useNavigate } from "react-router-dom";
+import { goToDetailPage } from "../../routes/coordinator";
 // import pokebola from "../../assets/pokebola.png"
 import {
   CardContainer,
@@ -16,6 +18,8 @@ const PokeCard = (props) => {
   const [pokemon, setPokemon] = useState([]);
   const [pokedexCart, setPokedexCart] = useState()
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     pegaPokemon(props.pokemon);
   }, [props.pokemon]);
@@ -24,9 +28,7 @@ const PokeCard = (props) => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${props.nome}`)
       .then((response) => {
-        console.log(pokemon)
         setPokemon(response.data);
-        console.log(response.data)
       })
       .catch((err) => {
         console.log(err);
@@ -46,10 +48,40 @@ const PokeCard = (props) => {
     }
   }
 
+  const IdPokemon = () => {
+
+    window.localStorage.removeItem('IdPokemon')
+    window.localStorage.setItem("IdPokemon", pokemon.name)
+    goToDetailPage(navigate)
+  }
+
+
+  const PokemonCapiturado = () => {
+
+    // const pokemonFoiCapiturado = window.localStorage.getItem('PokemonCapiturado')
+    const pokemonNome = pokemon.name
+
+    // if(pokemonFoiCapiturado.length > 0){
+    //   window.localStorage.removeItem('PokemonCapiturado')
+    // } else {}
+    window.localStorage.setItem("PokemonCapiturado", [ pokemonNome, true])
+    
+
+    console.log(window.localStorage.getItem('PokemonCapiturado'))
+
+
+
+      
+    // Mudar a pokebola com forme pokemonFoiCapiturado
+
+    }
+
+  
+
   return (
     <CardContainer>
       <CardFather>
-        <div onClick={() => console.log('clicou')}>
+        <div onClick={() => IdPokemon()}>
         <h3 >{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
@@ -65,7 +97,7 @@ const PokeCard = (props) => {
         </Imagem>
         </div>
         <CaptureButton>
-        <img  onClick={() => console.log("cliquei")} src={pokebolaTransp} />
+        <img  onClick={() => PokemonCapiturado()} src={pokebolaTransp} />
         </CaptureButton>
       </CardFather>
     </CardContainer>

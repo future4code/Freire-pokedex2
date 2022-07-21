@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { goToHomePage, goToVoltar } from "../../routes/coordinator";
 import {
+  ContainerTela, 
   Container,
-  Header,
   ImagemPokemon,
   Titulo,
   CardDetalheN2,
@@ -28,13 +28,12 @@ const Detail = () => {
 
 
   return (
-    <div>
-      <Header>
+    <ContainerTela>
         <h4> Detail </h4>
 
         <button onClick={() => goToVoltar(navigate)}> voltar </button>
         <button onClick={() => goToHomePage(navigate)}> HomePage </button>
-      </Header>
+
 
       <Container>
         <ImagemPokemon>
@@ -61,7 +60,7 @@ const Detail = () => {
           </ContainerDetalhe>
         </ImagemPokemon>
       </Container>
-    </div>
+    </ContainerTela>
   );
 };
 

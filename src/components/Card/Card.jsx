@@ -4,10 +4,7 @@ import PokeCard from "../Pokecard/Pokecard";
 import axios from "axios";
 import {
   Cards,
-  ContainerDetalhe,
   ContainerScroll,
-  CaptureButton, 
-  Stats
 } from "./CardStyles";
     
 const Card = (props) => {
@@ -41,14 +38,14 @@ const Card = (props) => {
   });
 
   return (
-    <ContainerDetalhe>
+    <>
       <ContainerScroll>
       <h4> Cards </h4>
         <Cards>
         {mapPokemons}
         </Cards>
         </ContainerScroll>
-    </ContainerDetalhe>
+    </>
   );
 };
 

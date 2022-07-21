@@ -5,8 +5,8 @@ export const CardContainer = styled.div`
   justify-content: space-between;
   width: 150px;
   height: 200px;
-  margin-left: 30px; 
-  margin-right: 40px; 
+  /* /* margin-left: 50px;  */
+  /* margin-right: 20px;  */ 
 `
 
 export const CardFather = styled.div`

@@ -1,36 +1,44 @@
 import styled from "styled-components";
 
+
+export const ContainerTela = styled.div`
+height: 57vh;
+width: 70%;
+background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg"});
+padding: 1%;
+border-radius: 25px;
+border: 15px #d14444 solid;
+margin: 5% 12% 4% 15%;
+;`
+
 export const Container = styled.div`
   display: flex; 
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   width: auto;
-  height: 90vh;
+  height: 90vh; 
 `;
 
 export const ContainerDetalhe = styled.div`
-
-  background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg"});
-  background-size: cover;
-  background-repeat: no-repeat;
+/* 
+  /* background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg"}); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
   background-position: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 90vw;
-  height: 42vw;
+  width: 20vw;
+  height: 20vw;
   color: #fff;
-  
 `;
 
-export const Header = styled.div`
-  display: flex;
-  background: #9ff784;
-  width: auto;
-  height: 10vh;
-`;
+// export const Header = styled.div`
+//   display: flex;
+//   background: #9ff784;
+//   width: auto;
+//   height: 10vh;
+// `;
 
 export const Titulo = styled.div`
 
@@ -45,7 +53,8 @@ export const Titulo = styled.div`
   }
 
   img {  
-    margin-top: -10vw;
+    /* margin-top: -10vw; */
+    /* height: 30vh; */
     filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
 }
 `;
@@ -138,3 +147,5 @@ export const CardDetalheN2 = styled.div`
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 `;
+
+

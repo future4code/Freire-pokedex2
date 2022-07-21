@@ -1,25 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import PokeCard from "../../components/Card/Pokecard";
+import PokeCard from "../Pokecard/Pokecard";
 import axios from "axios";
-import styled from "styled-components";
-
-
-const Cards = styled.div`
-display: flex;
-/* flex-wrap: wrap; */
-align-items: center;
-gap: 15px;
-justify-content: center;
-
-`
+import {
+  Cards,
+  ContainerScroll,
+} from "./CardStyles";
+    
 const Card = (props) => {
 
   const [pokeList, setPokeList] = useState([]);
 
+
   const getAllPokeName = () => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=20")
       .then((res) => {
         setPokeList(res.data.results);
       })
@@ -32,25 +27,24 @@ const Card = (props) => {
     getAllPokeName();
   }, []);
 
-
   const mapPokemons =
   pokeList &&
   pokeList.map((pokemon) => {
     return (
       <>
         <PokeCard nome={pokemon.name} />
-      </>
+      </> 
     );
   });
 
-
   return (
-    <div>
-      <h4> Cards </h4>
-      <Cards>
+    <>
+      <ContainerScroll>
+        <Cards>
         {mapPokemons}
         </Cards>
-    </div>
+        </ContainerScroll>
+    </>
   );
 };
 

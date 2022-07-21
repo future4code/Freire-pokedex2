@@ -14,6 +14,7 @@ const Card = (props) => {
 
   const getAllPokeName = () => {
     axios
+
       .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=50")
       .then((res) => {
         setPokeList(res.data.results);

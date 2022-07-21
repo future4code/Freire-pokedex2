@@ -62,8 +62,6 @@ const Detail = () => {
             </SegundoCardDetalhe>
           </ContainerDetalhe>
         </ImagemPokemon>
-        <Voltar onClick={() => goToVoltar(navigate)}></Voltar>
-
       </Container>
     </ContainerTela>
     </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToPokedexPage, goToDetailPage } from "../../routes/coordinator";
-import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import styled from "styled-components";
 
@@ -13,7 +12,7 @@ import styled from "styled-components";
 	  padding: 1%;
 	  border-radius: 25px;
 	  border: 15px #d14444 solid;
-    margin: 5% 12% 4% 15%;
+    margin: 6% 12% 3% 15%;
 ;`
 
   const HomePage = () => {

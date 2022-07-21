@@ -42,16 +42,14 @@ export const CardFather = styled.div`
 export const Imagem = styled.div`
 display: inline-flex;
 justify-content: center;
+
   
   img {
+    pointer-events:none;
+
     width: 100%;
     user-select: none;
     filter: drop-shadow(5px 5px 5px #222);
-
-    
-    /* &:hover{
-    transform: scale(1.5);
-  }  */
 }
 `
 export const Stats = styled.div`
@@ -73,6 +71,6 @@ export const CaptureButton = styled.div`
 img { 
   width: 20%; 
   user-select: none;
-  pointer-events:none;
+  
 }
 `

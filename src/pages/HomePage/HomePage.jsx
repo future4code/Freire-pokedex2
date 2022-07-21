@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { goToPokedexPage, goToDetailPage } from "../../routes/coordinator";
+import { goToPokedexPage } from "../../routes/coordinator";
 import Card from "../../components/Card/Card";
 import styled from "styled-components";
 
@@ -23,9 +23,7 @@ import styled from "styled-components";
     <>
     <ContainerTela>
       <h4> Home </h4>
-      <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>
-    <button onClick={() => goToDetailPage(navigate)}> Detail </button>
-    
+      <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>    
       <Card> </Card>
     </ContainerTela>
     </>

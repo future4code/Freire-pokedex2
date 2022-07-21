@@ -25,8 +25,6 @@ export const Container = styled.div`
 
 export const ContainerDetalhe = styled.div`
 
-
-
 filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
   img{width: 30vw;}
 
@@ -34,7 +32,8 @@ filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 80vw;
-  margin-top: 2vw;
+  margin-top: 1.5vw;
+  margin-left: 7.5vw;
   color: #fff;
 
   
@@ -43,7 +42,7 @@ filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
 
 export const Voltar = styled.div`
 
-  margin-left: 5vw;
+  margin-right: 5vw;
   display: flex;
   width: 0; 
   height: 0; 
@@ -84,29 +83,20 @@ export const ImagemPokemon = styled.div`
   filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
   img{
     pointer-events:none;
-    width: 30vw;}
+    width: 25vw;}
 
 `;
 
 export const PrimeiroCardDetalhe = styled.div`
   width: 21vw;
-  height: 32vw;
-  margin-left: 4vw;
-  flex-direction: column;
+  height: 28vw;
+  margin-right: 2vw;
+  /* transform: skewY(-10deg); // isso aqui que da essa parada de profundidade */
 
-  /* perspective: 400px;
-  :hover{
-
-    transform: rotate(0)
-
-  }
-
-  transition: .1s;
-  transform: rotateY(45deg); */
 
   h2{
     margin-left: 5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 1vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 6em;
     color: #ffffff26
@@ -114,16 +104,30 @@ export const PrimeiroCardDetalhe = styled.div`
 
   h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     margin-left: 1.5vw;
-    margin-top: 1vw;
+    margin-top: .6vw;
   }
+
+  /* h1 {
+    font-size: 20px;
+    pointer-events: none;
+    margin-left: 1.5vw;
+    margin-top: .8vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    perspective: 400vw;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    transform: skewY(20deg);
+    padding: .5vw;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hide;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);} */
 
   h1,h2{
     pointer-events: none;
-    /* transform: translateY(100px); */
-    /* opacity: 0; */
-    /* transition: 0.5s; */
   }
 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -134,41 +138,44 @@ export const PrimeiroCardDetalhe = styled.div`
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
 
-  /* :hover {
-
-    h1, h2{
-    transform: translateY(0px);
-    opacity: 100%;}
-
-  } */
-
 `;
 
 export const SegundoCardDetalhe = styled.div`
-  background-color: #000;
-  width: 21vw;
-  height: 32vw;
-  margin-right: 5vw;
+
   
-  /* transform: rotateY(45deg); */
+  width: 21vw;
+  height: 28vw;
+  /* transform: skewY(10deg);// isso aqui que da essa parada de profundidade */
+  margin-left: 3.8vw;
+  perspective: 400px; // Increases Effect
+
+
 
   h1 {
     font-size: 20px;
     pointer-events: none;
     margin-left: 1.5vw;
-    margin-top: 1vw;
+    margin-top: 0.9vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
   }
 
   h2{
     text-align: center;
-    margin-top: 1vw;
-    margin-bottom: 3vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2.5em;
-    color: #ffffff26
-  }
+    color: #ffffff26}
+
+/* 
+:hover{
+
+  transform: rotate(0)
+
+} */
+
+
+  
 
 
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -184,7 +191,7 @@ export const BarraDeProgresso = styled.div`
   
   height: .7vw;
   border-radius: 1vw;
-  background-color: #d7eeb2; 
+  background-color: #c5f873; 
   width: ${props => props.inputWidth || 0};
 
 

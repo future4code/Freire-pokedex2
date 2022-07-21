@@ -1,31 +1,35 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { goToPokedexPage, goToDetailPage } from "../../routes/coordinator";
-import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card";
 import styled from "styled-components";
 
 
-const HomeContainer = styled.div`
-  display: flex;
-  width: 100%;
-`
-const HomePage = () => {
- const navigate = useNavigate();
+    const ContainerTela = styled.div`
+    height: 57vh;
+    width: 70%;
+    background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg"});
+	  padding: 1%;
+	  border-radius: 25px;
+	  border: 15px #d14444 solid;
+    margin: 6% 12% 3% 15%;
+;`
+
+  const HomePage = () => {
+  const navigate = useNavigate();
 
 
   return (
     <>
-     
+    <ContainerTela>
       <h4> Home </h4>
       <button onClick={() => goToPokedexPage(navigate)}> Pokedex </button>
     <button onClick={() => goToDetailPage(navigate)}> Detail </button>
-    <HomeContainer>
+    
       <Card> </Card>
-    </HomeContainer>
+    </ContainerTela>
     </>
   );
 };
 
 export default HomePage;
-

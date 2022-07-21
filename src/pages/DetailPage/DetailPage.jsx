@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { goToHomePage, goToVoltar } from "../../routes/coordinator";
 import {
+  ContainerTela, 
   Container,
-  Header,
   ImagemPokemon,
   Titulo,
-  CardDetalheN2,
+  SegundoCardDetalhe,
   ContainerDetalhe,
-  CardDetalheN1
+  PrimeiroCardDetalhe,
+  Voltar,
+  BarraDeProgresso
 } from "./styled";
 import { PokemonSearch } from "../../hooks/axios";
 import { useEffect, useState } from "react";
@@ -17,10 +19,16 @@ import { useEffect, useState } from "react";
 const Detail = () => {
   const navigate = useNavigate();
 
-  const NomePokemon = "pikachu"
-  const statuTotal = 0
+  const NomePokemon = "Totodile"
+
 
   const pokemon = PokemonSearch(NomePokemon.toString().toLowerCase());
+
+  let Total = 0
+
+  const statuLista = pokemon && pokemon.data?.stats.map((item)  => Total =  item.base_stat + Total)
+
+
 
   console.log(pokemon);
 
@@ -29,24 +37,22 @@ const Detail = () => {
 
   return (
     <div>
-      <Header>
+    <ContainerTela>
+
         <h4> Detail </h4>
 
-        <button onClick={() => goToVoltar(navigate)}> voltar </button>
         <button onClick={() => goToHomePage(navigate)}> HomePage </button>
-      </Header>
-
       <Container>
         <ImagemPokemon>
           <ContainerDetalhe>
-              <CardDetalheN1>
+              <PrimeiroCardDetalhe>
                 <h2> #{pokemon.data?.id} </h2>
-                <h1> Altura {pokemon.data?.height} </h1>
-                <h1> Peso {pokemon.data?.weight} </h1>
-                {pokemon.data?.abilities?.map((item, index) => <h1> Habilidade Âº {index + 1} : {item.ability.name} </h1>)}
+                <h1> Altura : {pokemon.data?.height} cm</h1>
+                <h1> Peso : {pokemon.data?.weight} kg</h1>
+                {pokemon.data?.abilities?.map((item, index) => <h1> Habilidade N°{index + 1} : {item.ability.name} </h1>)}
                 {pokemon.data?.types.map((item) => <h1> Atributo : {item.type.name}</h1>)}
                 {pokemon.data?.forms.map((item) => <h1> Formas : {item.name}</h1>)}
-              </CardDetalheN1>
+              </PrimeiroCardDetalhe>
             <Titulo>
               <h1> {pokemon.data?.name.toUpperCase()}</h1>
               <img
@@ -54,13 +60,17 @@ const Detail = () => {
                 alt={pokemon.name}
               />
             </Titulo>
-            <CardDetalheN2>
-              {pokemon.data?.stats.map((item)  => <h1> {item.stat.name} : {item.base_stat}</h1>)}
-              <h1> Total = {} </h1>
-            </CardDetalheN2>
+            <SegundoCardDetalhe>
+              <h2> STATUS </h2>
+              {pokemon.data?.stats.map((item)  => <h1> {item.stat.name} : {item.base_stat} <BarraDeProgresso inputWidth={(item.base_stat + 30).toString() + 'px'}  ></BarraDeProgresso></h1>)}
+              <h1> Total = {Total} </h1>
+            </SegundoCardDetalhe>
           </ContainerDetalhe>
         </ImagemPokemon>
+        <Voltar onClick={() => goToVoltar(navigate)}></Voltar>
+
       </Container>
+    </ContainerTela>
     </div>
   );
 };

@@ -1,14 +1,17 @@
 import React from "react";
 import { Router } from "./routes/Routes"
-import './index.css'
+import { GlobalStyles } from "./GlobalStyle";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-
-      <div>
+    <>
+      <Header />
+      <GlobalStyles />
         <Router/>
-      </div>
+        < Footer/>
+      </>
   );
 }
-
 export default App;

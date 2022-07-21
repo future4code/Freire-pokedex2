@@ -10,6 +10,7 @@ const FooterStyled = styled.div `
     display: flex;
     align-items: center;
     justify-content: space-around;
+    filter: drop-shadow(1px 1px 10px #222);
 
 `
 

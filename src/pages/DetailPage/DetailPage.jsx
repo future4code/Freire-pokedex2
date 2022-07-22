@@ -9,7 +9,8 @@ import {
   ContainerDetalhe,
   PrimeiroCardDetalhe,
   Voltar,
-  BarraDeProgresso
+  BarraDeProgresso,
+  SmallButtons2
 } from "./styled";
 import { PokemonSearch } from "../../hooks/axios";
 import { useEffect, useState } from "react";
@@ -33,10 +34,10 @@ const Detail = () => {
   return (
     <div>
     <ContainerTela>
-
-        <h4> Detail </h4>
-
-        <button onClick={() => goToHomePage(navigate)}> HomePage </button>
+    <SmallButtons2>
+      <button></button>
+      <button></button>
+    </SmallButtons2>
       <Container>
         <ImagemPokemon>
           <ContainerDetalhe>
@@ -62,10 +63,9 @@ const Detail = () => {
             </SegundoCardDetalhe>
           </ContainerDetalhe>
         </ImagemPokemon>
-        <Voltar onClick={() => goToVoltar(navigate)}></Voltar>
-
-      </Container>
+      </Container>   
     </ContainerTela>
+    <Voltar onClick={() => {goToVoltar(navigate)}}></Voltar>
     </div>
   );
 };

@@ -11,8 +11,9 @@ import {
   CardFather,
   Imagem,
   CaptureButton, 
-  Stats
+  Stats, 
 } from "./PokeStyles";
+
 
 const PokeCard = (props) => {
   const [pokemon, setPokemon] = useState([]);
@@ -36,17 +37,17 @@ const PokeCard = (props) => {
   };
 
   
-  const addPokedex = (id) => {
-    //acrescenta 0 p mudar o poke
-    for (let i = 0; i < pokemon.length; i++) {
-      if (pokemon[i].id === id) {
-        //copia add novos poke
-        let newPokedex = [...pokedexCart, pokemon[i]]
-        setPokedexCart(newPokedex);
+  // const addPokedex = (id) => {
+  //   //acrescenta 0 p mudar o poke
+  //   for (let i = 0; i < pokemon.length; i++) {
+  //     if (pokemon[i].id === id) {
+  //       //copia add novos poke
+  //       let newPokedex = [...pokedexCart, pokemon[i]]
+  //       setPokedexCart(newPokedex);
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 
   const IdPokemon = () => {
 
@@ -75,14 +76,13 @@ const PokeCard = (props) => {
     // Mudar a pokebola com forme pokemonFoiCapiturado
 
     }
-
   
 
   return (
     <CardContainer>
-      <CardFather>
+      <CardFather>  
         <div onClick={() => IdPokemon()}>
-        <h3 >{pokemon.name && <>{pokemon.name.toUpperCase()}</>}</h3>
+        <h3 >{pokemon.name && <>{pokemon.name.toUpperCase()}</>} <h5>#{pokemon.id}</h5></h3>
         <Stats>
           <p>{pokemon.types && <>{pokemon.types[0].type.name}</>}</p>
           <p>{pokemon.types && (pokemon.types.length > 1 ? <>|{pokemon.types[1].type.name}</> : "")}</p>
@@ -97,7 +97,7 @@ const PokeCard = (props) => {
         </Imagem>
         </div>
         <CaptureButton>
-        <img  onClick={() => PokemonCapiturado()} src={pokebolaTransp} />
+        <img  onClick={() => console.log('clicou')} src={pokebolaTransp} />
         </CaptureButton>
       </CardFather>
     </CardContainer>

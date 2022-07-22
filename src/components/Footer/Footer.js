@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <FooterStyled>
         <h4>POKEDEX</h4>
-        <h4>Copyrights© 2022</h4>
+        <h4>Devs Gustavo e Maycon </h4>
         </FooterStyled>
     )
 }

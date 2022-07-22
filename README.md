@@ -22,11 +22,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 <a id="Projeto"></a>
 ## 💻 Projeto
-   Esta aplicação consiste em uma pokedex semelhante ao do anime pokemon, mostrando o pokemon e detalhes de status do pokemon.
 
-   A pokedex é bem simples de se usar, basta clicar em algum dos pokemon que estão no carrocel que imediatamente ira abrir uma nova pagina com todos os detalhes do pokemon escolhido 
+Esta aplicação consiste em uma pokédex semelhante ao do anime pokemon, mostrando o pokémon e detalhes de status do pokémon.
 
-   A plataforma se destaca por ser intuitiva e semelhante a pokedex original do anime, além de ser toda anima com leds piscando como se fosse real. 
+A pokédex é bem simples de se usar, basta clicar em algum dos pokémon que estão no carrossel que imediatamente irá abrir uma nova página com todos os detalhes do pokémon escolhido.
+
+A plataforma se destaca por ser intuitiva e semelhante a pokédex original do anime, além de ser toda animada com leds piscando como se fosse real.
+
 
 ## Link surge - [Clique Aqui -> Pokedex](https://pokedex-devs22.surge.sh/)
 

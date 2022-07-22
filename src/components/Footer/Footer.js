@@ -19,7 +19,11 @@ const Footer = () => {
     return (
         <FooterStyled>
         <h4>POKEDEX</h4>
-        <h4>Devs Gustavo e Maycon </h4>
+        <h4 >Devs Gustavo e Maycon </h4>
+        <a href='https://www.linkedin.com/in/gustavomonteirodev/' target="_blank" className="social-icon"> Gustavo</a>
+        <a href='https://www.linkedin.com/in/gustavomonteirodev/' target="_blank" className="social-icon"> Maycon</a>
+
+
         </FooterStyled>
     )
 }

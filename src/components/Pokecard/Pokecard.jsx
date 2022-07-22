@@ -13,6 +13,7 @@ import {
   CaptureButton, 
   Stats, 
 } from "./PokeStyles";
+import AppContext from '../../CapituraPokemon/Context';
 
 
 const PokeCard = (props) => {
@@ -79,7 +80,17 @@ const PokeCard = (props) => {
   
 
   return (
+<div>
+    <AppContext.Consumer>
+    {({ user }) => (
+      <p>
+        {user && user}{' '}
+        {Object.keys(user).length} pokemons
+      </p>
+    )}
+  </AppContext.Consumer>
     <CardContainer>
+      
       <CardFather>  
         <div onClick={() => IdPokemon()}>
         <h3 >{pokemon.name && <>{pokemon.name.toUpperCase()}</>} <h5>#{pokemon.id}</h5></h3>
@@ -101,6 +112,7 @@ const PokeCard = (props) => {
         </CaptureButton>
       </CardFather>
     </CardContainer>
+    </div>
   );
 };
 

@@ -74,11 +74,6 @@ button {
 
 `
 
-
-
-
-
-
   const HomePage = () => {
   const navigate = useNavigate();
 

@@ -2,6 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {goToVoltar} from '../../routes/coordinator';
 import styled from 'styled-components';
+import { useState, useContext } from 'react';
+import AppContext from '../../CapituraPokemon/Context';
+import PokeCard from '../../components/Pokecard/Pokecard';
 
  
     const ContainerTela = styled.div`
@@ -27,7 +30,6 @@ button {
         width: 11px; 
         height: 11px; 
         margin-left: 30px; 
-        cursor:pointer; 
         border: outset rgb(248, 187, 187) 1px;
         transform: rotate(60deg);
          background: radial-gradient(
@@ -60,11 +62,16 @@ button {
 
 `
 
-
 const Pokedex = () => {
+
+
 
   const navigate = useNavigate()
 
+  // const {setToPokedex} = useContext(AppContext)
+  // setToPokedex('teste')
+
+  // const {pokedex} = useContext(AppContext)
 
   return (
      <ContainerTela>
@@ -73,6 +80,16 @@ const Pokedex = () => {
       <button></button>
     </SmallButtons2>
             <h4>  POKEDEX </h4>
+          <AppContext.Consumer>
+        {({user})=> 
+        <p>
+            {user && user}  {Object.keys(user).length} 
+          
+        </p>
+        
+        } 
+          </AppContext.Consumer>
+        
             <button onClick={() => goToVoltar(navigate)}> voltar </button>
             </ContainerTela>
   );
@@ -80,3 +97,6 @@ const Pokedex = () => {
 
 
 export default Pokedex;
+
+
+

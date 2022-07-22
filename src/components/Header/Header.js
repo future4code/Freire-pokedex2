@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { goToHomePage } from "../../routes/coordinator";
 
-
 const HeaderStyled = styled.div `
 
 	height: 5vh;
@@ -101,6 +100,20 @@ button {
 
         }
 
+  :hover{
+    border-right:25px solid #ffc400; 
+    
+  }
+  @media(max-width: 600px) { 
+    margin-left: 88vw;
+    margin-top: -35vh
+    }
+
+
+
+
+
+
 `
 
 const SmallButtons3 = styled.div`
@@ -129,9 +142,6 @@ button {
         }
 
 `
-
-
-
 
 
 const Header = () => { 

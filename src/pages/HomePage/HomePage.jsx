@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { goToPokedexPage } from "../../routes/coordinator";
+import { goToPokedexPage, goToVoltar } from "../../routes/coordinator";
 import Card from "../../components/Card/Card";
 import styled from "styled-components";
 import bag from "../../assets/bag.png"
@@ -15,7 +15,63 @@ import bag from "../../assets/bag.png"
     box-shadow: inset 0 0 2em black, 0 0 1em black;
     filter: drop-shadow(10px 10px 10px #222);
     margin: 7% 1% 0 10%;
+
+     @media (max-width: 600px) { 
+    width: 60%;
+    background-image: url(https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg);
+    border-radius: 10px;
+    border: 20px #c5baba solid;
+    box-shadow: inset 0 0 2em black, 0 0 1em black;
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    margin: 25% 1% 0 10%;
+    } 
+
+    @media (max-width: 900px) { 
+      height: 55vh; 
+  }
 ;`
+
+  const Voltar = styled.div`
+  position: absolute; 
+  margin-left: 94vw;
+  display: flex;
+  margin-top: -35vh; 
+  align-self: center; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent; 
+  border-right:25px solid #ffee00; 
+  cursor: pointer;
+  animation: pulse-yellow 1s infinite;
+  @keyframes pulse-yellow {
+  0% {
+    transform: scale(0.95);
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
+  }
+  
+  70% {
+    transform: scale(1);
+    border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent; 
+  filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent; 
+    filter: drop-shadow(rgba(219, 198, 14, 0.892) 3px 3px 3px);
+  }
+}
+  :hover{
+    border-right:25px solid #ffc400; 
+  }
+
+  @media(max-width: 600px) { 
+    margin-left: 88vw;
+    margin-top: -35vh
+    }
+`;
 
 const Bag = styled.div`
   img { 
@@ -27,6 +83,20 @@ const Bag = styled.div`
     transform: scale(1.2);
     filter: drop-shadow(5px 4px 3px gold);
   }
+
+  @media(max-width: 600px) { 
+    img { 
+    height: 45px;
+  }
+  margin-top: 2px; 
+  margin-left: 75%; 
+  :hover {
+    transform: scale(1.2);
+    filter: drop-shadow(5px 4px 3px gold);
+  }
+   
+    }
+
 
 ;`
 
@@ -72,12 +142,12 @@ button {
 }
 }
 
+  @media(max-width: 600px) { 
+   margin-top: -20px; 
+   margin-left: 60px; 
+  }
+
 `
-
-
-
-
-
 
   const HomePage = () => {
   const navigate = useNavigate();
@@ -95,6 +165,7 @@ button {
       <Card> </Card>
      
     </ContainerTela>
+    <Voltar onClick={() => {goToVoltar(navigate)}}></Voltar>
     </>
   );
 };

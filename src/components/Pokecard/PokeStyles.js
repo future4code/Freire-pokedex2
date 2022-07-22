@@ -23,11 +23,13 @@ export const CardFather = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
+  cursor: pointer; 
   
     &:hover {
       /* box-shadow: 1px 3px 10px 2px #cbfabb; */
       box-shadow: inset 0 0 1em gold, 0 0 1em red;
       
+
        
   }
 

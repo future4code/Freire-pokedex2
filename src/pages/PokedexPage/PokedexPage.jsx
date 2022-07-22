@@ -1,19 +1,34 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {goToVoltar} from '../../routes/coordinator';
+import { goToVoltar } from '../../routes/coordinator';
 import styled from 'styled-components';
 
- 
-    const ContainerTela = styled.div`
+const ContainerTela = styled.div`
     height: 57vh;
     width: 75%;
-    background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg"});
-	  padding: 1%;
+    background-image: url(${"https://cdn.dribbble.com/users/2104064/screenshots/8512308/artboardsnore_2x_4x.png"});
+	  background-size: contain ; 
+    padding: 1%;
 	  border-radius: 10px;;
 	  border: 20px #c5baba solid;
     box-shadow: inset 0 0 2em black, 0 0 1em black;
     filter: drop-shadow(10px 10px 10px #222);
     margin: 7% 1% 0 10%;
+
+    @media (max-width: 600px) { 
+    width: 60%;
+    background-image: url(https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/10.jpg);
+    border-radius: 10px;
+    border: 20px #c5baba solid;
+    box-shadow: inset 0 0 2em black, 0 0 1em black;
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    margin: 25% 1% 0 10%;
+    } 
+
+    @media (max-width: 900px) { 
+      height: 55vh; 
+  }
 
 ;`
 
@@ -57,9 +72,52 @@ button {
   }
 }
 }
+  @media(max-width: 600px) { 
+   margin-top: -20px; 
+   margin-left: 60px; 
+  }
 
 `
+const Voltar = styled.div`
+position: absolute; 
+margin-left: 94vw;
+display: flex;
+margin-top: -35vh; 
+align-self: center; 
+border-top: 25px solid transparent;
+border-bottom: 25px solid transparent; 
+border-right:25px solid #ffee00; 
+cursor: pointer;
+animation: pulse-yellow 1s infinite;
+@keyframes pulse-yellow {
+0% {
+  transform: scale(0.95);
+  filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
+}
 
+70% {
+  transform: scale(1);
+  border-top: 25px solid transparent;
+border-bottom: 25px solid transparent; 
+filter: drop-shadow(rgba(0, 0, 0, 0.35) 5px 5px 15px);
+}
+
+100% {
+  transform: scale(0.95);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent; 
+  filter: drop-shadow(rgba(219, 198, 14, 0.892) 3px 3px 3px);
+}
+}
+:hover{
+  border-right:25px solid #ffc400; 
+}
+
+@media(max-width: 600px) { 
+    margin-left: 88vw;
+    margin-top: -35vh
+    }
+`;
 
 const Pokedex = () => {
 
@@ -67,14 +125,15 @@ const Pokedex = () => {
 
 
   return (
-     <ContainerTela>
-      <SmallButtons2>
-      <button></button>
-      <button></button>
-    </SmallButtons2>
-            <h4>  POKEDEX </h4>
-            <button onClick={() => goToVoltar(navigate)}> voltar </button>
-            </ContainerTela>
+    <>
+      <ContainerTela>
+        <SmallButtons2>
+          <button></button>
+          <button></button>
+        </SmallButtons2>
+      </ContainerTela>
+      <Voltar onClick={() => goToVoltar(navigate)}></Voltar>
+    </>
   );
 }
 

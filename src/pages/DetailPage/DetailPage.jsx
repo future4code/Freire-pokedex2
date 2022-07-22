@@ -65,6 +65,7 @@ const Detail = () => {
         </ImagemPokemon>
       </Container>
     </ContainerTela>
+    <Voltar onClick={() => {goToVoltar(navigate)}}></Voltar>
     </div>
   );
 };

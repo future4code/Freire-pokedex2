@@ -11,6 +11,18 @@ const FooterStyled = styled.div `
     align-items: center;
     justify-content: space-around;
     filter: drop-shadow(1px 1px 10px #222);
+    
+    @media(max-width: 900px) { 
+        margin-top: 22%; 
+        height: 10vh; 
+  }
+
+    @media(max-width: 400px) { 
+        height: 10vh; 
+        margin-top: 10%; 
+  }
+
+   
 
 `
 

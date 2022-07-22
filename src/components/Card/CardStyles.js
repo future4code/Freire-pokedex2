@@ -6,9 +6,6 @@ justify-content: space-between;
 align-items: center;
 gap: 25px;
 
-// Tentando fazer melher os pokemons automatico
-
-
 animation: is-rolar 60s linear infinite;
 
 @keyframes is-rolar {
@@ -24,9 +21,8 @@ export const ContainerScroll = styled.div`
     justify-content: space-between;
     margin: 2vw 2vw;
     padding-right: 15%;  
-    padding-bottom: 10%; 
+    padding-bottom: 2%; 
     overflow-x: auto; 
-    
     
 
     ::-webkit-scrollbar{

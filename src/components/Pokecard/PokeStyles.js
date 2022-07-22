@@ -18,7 +18,6 @@ export const CardFather = styled.div`
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer; 
   justify-content: center;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -26,17 +25,27 @@ export const CardFather = styled.div`
   backdrop-filter: blur(5px);
   
     &:hover {
-      box-shadow: 1px 3px 10px 2px #cbfabb;
+      /* box-shadow: 1px 3px 10px 2px #cbfabb; */
+      box-shadow: inset 0 0 1em gold, 0 0 1em red;
+      
        
   }
 
   h3{
     margin: 5px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
+    color: #d0d0d0;
     user-select: none;
     pointer-events:none;
+    justify-content: space-between;
+    display: flex; 
   }
+  h5{
+    font-size: 20px; 
+    color: #ffffff26; 
+  }
+
+
 `
 
 export const Imagem = styled.div`
@@ -56,7 +65,7 @@ export const Stats = styled.div`
   display: flex;
 
     p {
-      color: black;
+      color: #d0d0d0; 
       font-size: 10px; 
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       text-transform: uppercase; 
@@ -73,4 +82,12 @@ img {
   user-select: none;
   
 }
+`
+
+
+export const IdPoke = styled.div`
+display: flex;
+
+
+
 `

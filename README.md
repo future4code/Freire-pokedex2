@@ -67,7 +67,7 @@ O que funciona:
 O que não funciona: 
 - Toda parte da Pokedex
 
-## Link Trello: [Click -> Trello](https://trello.com/b/Qm5sNW4q/pokedex)
+## Link Trello: [Clique -> Trello](https://trello.com/b/Qm5sNW4q/pokedex)
 
 
 

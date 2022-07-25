@@ -30,7 +30,7 @@ A pokédex é bem simples de se usar, basta clicar em algum dos pokémon que est
 A plataforma se destaca por ser intuitiva e semelhante a pokédex original do anime, além de ser toda animada com leds piscando como se fosse real.
 
 
-## Link surge - [Clique Aqui -> Pokedex](https://pokedex-devs22.surge.sh/)
+## Link surge - [Clique Aqui -> Pokedex](https://poke-react-22.surge.sh/)
 
 <a id="Instalação"></a>
 ## 👨‍💻 Instalação

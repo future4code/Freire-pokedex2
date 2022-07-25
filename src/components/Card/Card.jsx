@@ -15,7 +15,7 @@ const Card = (props) => {
   const getAllPokeName = () => {
     axios
 
-      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=50")
+      .get("https://pokeapi.co/api/v2/pokemon?offset=0&limit=100")
       .then((res) => {
         setPokeList(res.data.results);
       })
@@ -30,10 +30,10 @@ const Card = (props) => {
 
   const mapPokemons =
   pokeList &&
-  pokeList.map((pokemon) => {
+  pokeList.map((pokemon, index) => {
     return (
       <>
-        <PokeCard nome={pokemon.name} />
+        <PokeCard key={index} nome={pokemon.name} />
       </> 
     );
   });

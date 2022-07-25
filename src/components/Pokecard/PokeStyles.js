@@ -54,10 +54,8 @@ export const Imagem = styled.div`
 display: inline-flex;
 justify-content: center;
 
-  
   img {
     pointer-events:none;
-
     width: 100%;
     user-select: none;
     filter: drop-shadow(5px 5px 5px #222);

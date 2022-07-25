@@ -15,7 +15,7 @@ export const PokemonSearch = (NomePokemon) => {
       )
       .then((response) => {
         setPokemonRecebido(response)
-
+        console.log(response)
       })
       .catch((err) => {
         console.log(err);

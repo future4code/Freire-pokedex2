@@ -1,14 +1,26 @@
-<h1 align="center"> Freire Pokedex Grupo 2<br/><br/>
+<h1 align="center">
 <img width=500 src="https://user-images.githubusercontent.com/60453269/180514649-84eed177-8639-46be-a6ed-0b641b56c50c.png"/> 
 </h1>
 
 <p align="center">
   <a href="#Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#Projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Imagens">Imagens</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#Integrantes">Integrantes</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
+
+<br/>
+
+<h3 align="center">
+  🔊 Ative o Som Para Ter Uma Experiência Mais Agradável 😁 
+</h3>
+
+<br/>
+
+https://user-images.githubusercontent.com/60453269/185654038-0e213200-4717-49f2-88c7-cfc803b53787.mp4
+
+<br/>
 
 <a id="Tecnologias"></a>
 ## 🚀 Tecnologias 

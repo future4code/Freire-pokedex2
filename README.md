@@ -19,7 +19,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - React.js
 - Styled Components
 
-
 <a id="Projeto"></a>
 ## 💻 Projeto
 
@@ -28,7 +27,6 @@ Esta aplicação consiste em uma pokédex semelhante ao do anime pokemon, mostra
 A pokédex é bem simples de se usar, basta clicar em algum dos pokémon que estão no carrossel que imediatamente irá abrir uma nova página com todos os detalhes do pokémon escolhido.
 
 A plataforma se destaca por ser intuitiva e semelhante a pokédex original do anime, além de ser toda animada com leds piscando como se fosse real.
-
 
 ## Link surge  
 [Live Demo -> Pokedex](https://pokedex-dev22.surge.sh/)
@@ -55,6 +53,7 @@ A plataforma se destaca por ser intuitiva e semelhante a pokédex original do an
 ![HomePagePhone](https://user-images.githubusercontent.com/60453269/180514167-fc537632-9ace-4032-8ac7-8548e90c7dfb.png) | ![DetalhesPhone](https://user-images.githubusercontent.com/60453269/180514209-c81b983a-457e-48f0-bfa0-6ecd355be293.png)
 
 <a id="Integrantes"></a>
+
 
 ## 💼 Nome dos integrantes: 
 

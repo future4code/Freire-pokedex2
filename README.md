@@ -30,7 +30,7 @@ A pokédex é bem simples de se usar, basta clicar em algum dos pokémon que est
 A plataforma se destaca por ser intuitiva e semelhante a pokédex original do anime, além de ser toda animada com leds piscando como se fosse real.
 
 
-## Link surge
+## Link surge  
 [Live Demo -> Pokedex](https://pokedex-dev22.surge.sh/)
 
 <a id="Instalação"></a>
@@ -62,15 +62,15 @@ A plataforma se destaca por ser intuitiva e semelhante a pokédex original do an
 - Gustavo- [LinkeDin](https://www.linkedin.com/in/gustavomonteirodev/)
 
 O que funciona:
+
 - Home
 - Página de detalhes
 
 O que não funciona: 
+
 - Toda parte da Pokedex
 
 ## Link Trello: [Clique -> Trello](https://trello.com/b/Qm5sNW4q/pokedex)
-
-
 
 <h1 align="center"> 👋 Até a próxima <br/><br/>
 <img width=500 src="https://user-images.githubusercontent.com/60453269/180562678-f93892f7-3690-4217-97f1-d6e6a5df330f.png"/> 

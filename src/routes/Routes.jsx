@@ -6,17 +6,15 @@ import PokedexPage from "../pages/PokedexPage/PokedexPage.jsx";
 import Header from "../components/Header/Header";
 
 export const Router = () => {
-
     return(
         <BrowserRouter>
-        <Header />
-        <Routes>
-            <Route index element = {<HomePage/>} />
-            <Route path= "*" element = {<ErrorPage/>} />
-            <Route path= "DetailPage" element = {<DetailPage/>} />
-            <Route path= "PokedexPage" element = {<PokedexPage/>} />
-        </Routes>
+            <Header/>
+            <Routes>
+                <Route index element = {<HomePage/>} />
+                <Route path= "*" element = {<ErrorPage/>} />
+                <Route path= "DetailPage" element = {<DetailPage/>} />
+                <Route path= "PokedexPage" element = {<PokedexPage/>} />
+            </Routes>
       </BrowserRouter>
-
     )
 }

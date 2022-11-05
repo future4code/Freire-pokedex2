@@ -6,7 +6,6 @@ export const CardContainer = styled.div`
   width: 200px;
   height: 250px;
 `
-
 export const CardFather = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,15 +23,9 @@ export const CardFather = styled.div`
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   cursor: pointer; 
-  
-    &:hover {
-      /* box-shadow: 1px 3px 10px 2px #cbfabb; */
-      box-shadow: inset 0 0 1em gold, 0 0 1em red;
-      
-
-       
+  &:hover {
+      box-shadow: inset 0 0 1em gold, 0 0 1em red;   
   }
-
   h3{
     margin: 5px auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,15 +39,10 @@ export const CardFather = styled.div`
     font-size: 20px; 
     color: #ffffff26; 
   }
-
-
 `
-
 export const Imagem = styled.div`
-display: inline-flex;
-justify-content: center;
-
-  
+  display: inline-flex;
+  justify-content: center;
   img {
     pointer-events:none;
 
@@ -65,7 +53,6 @@ justify-content: center;
 `
 export const Stats = styled.div`
   display: flex;
-
     p {
       color: #d0d0d0; 
       font-size: 10px; 
@@ -76,20 +63,13 @@ export const Stats = styled.div`
       pointer-events:none;
     }
 `
-
 export const CaptureButton = styled.div`
-
-img { 
-  width: 20%; 
-  user-select: none;
-  
-}
+  img { 
+    width: 20%; 
+    user-select: none;
+    
+  }
 `
-
-
 export const IdPoke = styled.div`
-display: flex;
-
-
-
+  display: flex;
 `

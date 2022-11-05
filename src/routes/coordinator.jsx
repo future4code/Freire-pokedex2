@@ -1,22 +1,12 @@
-// HomePage []
-
 export const goToPokedexPage = (navigate) => {
     navigate("/PokedexPage")
-  }
-
-  export const goToDetailPage = (navigate) => {
+}
+export const goToDetailPage = (navigate) => {
     navigate("/DetailPage")
-  }
-
+}
 export const goToHomePage = (navigate) => {
-      navigate("/")
-    }
-  
+    navigate("/")
+}
 export const goToVoltar = (navigate) => {
-      navigate(-1)
-    }
-
-
-
-
-
+    navigate(-1)
+}

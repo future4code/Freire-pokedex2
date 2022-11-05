@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { goToHomePage, goToVoltar } from "../../routes/coordinator";
+import { goToVoltar } from "../../routes/coordinator";
 import {
   ContainerTela, 
   Container,
@@ -13,61 +13,51 @@ import {
   SmallButtons2
 } from "./styled";
 import { PokemonSearch } from "../../hooks/axios";
-import { useEffect, useState } from "react";
-
-// import { LimitadorDeApi } from "../../hooks/axios";
+import { useState } from "react";
 
 const Detail = () => {
   const navigate = useNavigate();
-
-  // console.log(window.localStorage.setItem("IdPokemon"))
-
+  const [pokemon, setPokemon] = useState('')
   const NomePokemon = window.localStorage.getItem('IdPokemon')
-
-
-  const pokemon = PokemonSearch(NomePokemon.toString().toLowerCase());
-
-  let Total = 0
-
-  const statuLista = pokemon && pokemon.data?.stats.map((item)  => Total =  item.base_stat + Total)
-
+  const result = PokemonSearch(NomePokemon.toString().toLowerCase())
+      result.then((response) => {
+      setPokemon(response)
+  })
   return (
     <div>
-    <ContainerTela>
-    <SmallButtons2>
-      <button></button>
-      <button></button>
-    </SmallButtons2>
-      <Container>
-        <ImagemPokemon>
-          <ContainerDetalhe>
-              <PrimeiroCardDetalhe>
-                <h2> #{pokemon.data?.id} </h2>
-                <h1> Altura : {pokemon.data?.height} cm</h1>
-                <h1> Peso : {pokemon.data?.weight} kg</h1>
-                {pokemon.data?.abilities?.map((item, index) => <h1> Habilidade N°{index + 1} : {item.ability.name} </h1>)}
-                {pokemon.data?.types.map((item) => <h1> Atributo : {item.type.name}</h1>)}
-                {pokemon.data?.forms.map((item) => <h1> Formas : {item.name}</h1>)}
-              </PrimeiroCardDetalhe>
-            <Titulo>
-              <h1> {pokemon.data?.name.toUpperCase()}</h1>
-              <img
-                src={pokemon.data?.sprites?.other?.home?.front_default}
-                alt={pokemon.name}
-              />
-            </Titulo>
-            <SegundoCardDetalhe>
-              <h2> STATUS </h2>
-              {pokemon.data?.stats.map((item)  => <h1> {item.stat.name} : {item.base_stat} <BarraDeProgresso inputWidth={(item.base_stat + 30).toString() + 'px'}  ></BarraDeProgresso></h1>)}
-              <h1> Total = {Total} </h1>
-            </SegundoCardDetalhe>
-          </ContainerDetalhe>
-        </ImagemPokemon>
-      </Container>
-    </ContainerTela>
-    <Voltar onClick={() => {goToVoltar(navigate)}}></Voltar>
+      <ContainerTela>
+      <SmallButtons2>
+        <button></button>
+        <button></button>
+      </SmallButtons2>
+        <Container>
+          <ImagemPokemon>
+            <ContainerDetalhe>
+                <PrimeiroCardDetalhe>
+                  <h2> #{pokemon && pokemon.id} </h2>
+                  <h1> Altura : {pokemon && pokemon.height} cm</h1>
+                  <h1> Peso : {pokemon && pokemon.weight} kg</h1>
+                  {pokemon && pokemon.abilities?.map((item, index) => <h1> Habilidade N°{index + 1} : {item.ability.name} </h1>)}
+                  {pokemon && pokemon.types.map((item) => <h1> Atributo : {item.type.name}</h1>)}
+                  {pokemon && pokemon.forms.map((item) => <h1> Formas : {item.name}</h1>)}
+                </PrimeiroCardDetalhe>
+              <Titulo>
+                <h1> {pokemon && pokemon.name.toUpperCase()}</h1>
+                <img
+                  src={pokemon && pokemon.sprites?.other?.home?.front_default}
+                  alt={pokemon && pokemon.name}
+                />
+              </Titulo>
+              <SegundoCardDetalhe>
+                <h2> STATUS </h2>
+                {pokemon && pokemon.stats.map((item)  => <h1> {item.stat.name} : {item.base_stat} <BarraDeProgresso inputWidth={(item.base_stat + 30).toString() + 'px'}  ></BarraDeProgresso></h1>)}
+              </SegundoCardDetalhe>
+            </ContainerDetalhe>
+          </ImagemPokemon>
+        </Container>
+      </ContainerTela>
+      <Voltar onClick={() => {goToVoltar(navigate)}}></Voltar>
     </div>
   );
 };
-
 export default Detail;

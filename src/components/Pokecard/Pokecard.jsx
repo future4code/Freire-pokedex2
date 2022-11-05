@@ -13,17 +13,13 @@ import {
   Stats, 
 } from "./PokeStyles";
 
-
 const PokeCard = (props) => {
   const [pokemon, setPokemon] = useState([]);
   const [pokedexCart, setPokedexCart] = useState()
-
   const navigate = useNavigate();
-
   useEffect(() => {
     pegaPokemon(props.pokemon);
   }, [props.pokemon]);
-
   const pegaPokemon = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${props.nome}`)
@@ -34,23 +30,15 @@ const PokeCard = (props) => {
         console.log(err);
       });
   };
-
-
   const IdPokemon = () => {
-
     window.localStorage.removeItem('IdPokemon')
     window.localStorage.setItem("IdPokemon", pokemon.name)
     goToDetailPage(navigate)
   }
-
-
   const PokemonCapiturado = () => {
-
     const pokemonNome = pokemon.name
     window.localStorage.setItem("PokemonCapiturado", [ pokemonNome, true])
-    }
-  
-
+  }
   return (
     <CardContainer>
       <CardFather>  
@@ -73,5 +61,4 @@ const PokeCard = (props) => {
     </CardContainer>
   );
 };
-
 export default PokeCard;

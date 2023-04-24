@@ -1,17 +1,16 @@
 import React from "react";
-import { Router } from "./routes/Routes"
+import { Router } from "./routes/Routes";
 import { GlobalStyles } from "./GlobalStyle";
-import {GlobalContext} from "./global/GlobalContext"
 import Footer from "./components/Footer/Footer";
-
+import { GlobalProvider } from "./global/context/useContext";
 
 function App() {
   return (
-    <>
+    <GlobalProvider>
       <GlobalStyles />
-        <Router/>
-        <Footer/>
-      </>
+      <Router />
+      <Footer />
+    </GlobalProvider>
   );
 }
 export default App;

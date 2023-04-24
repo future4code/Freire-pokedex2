@@ -1,31 +1,22 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import {goToHomePage, goToVoltar} from '../../routes/coordinator';
-import styled from 'styled-components';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { goToHomePage } from "../../routes/coordinator";
+import pokebola from "../../assets/pokebola.png";
+import { ContainerTela } from "../PokedexPage/styled";
 
-const ContainerTela = styled.div`
-height: 57vh;
-width: 70%;
-background-image: url(${"https://assets.hongkiat.com/uploads/minimalist-dekstop-wallpapers/4k/original/15.jpg"});
-padding: 1%;
-border-radius: 25px;
-border: 15px #d14444 solid;
-margin: 5% 12% 4% 15%;
-;`
+export const ErrorPage = () => {
+  const navigate = useNavigate();
 
-const ErrorPage = () => {
-
-  const navigate = useNavigate()
-  
   return (
-          <ContainerTela>
-            <h4>  A pagina não existe </h4>
-            <button onClick={() => goToHomePage(navigate)}> HomePage </button>
-            <button onClick={() => goToVoltar(navigate)}> voltar </button>
-          </ContainerTela>
-   
+    <ContainerTela>
+      <ErrorPage>
+        <h1>
+          4 <img src={pokebola} /> 4
+        </h1>
+      </ErrorPage>
+      <h2> Uh-oh! </h2>
+      <h3> você parece perdido em sua jornada! </h3>
+      <button onClick={() => goToHomePage(navigate)}>← Voltar para home</button>
+    </ContainerTela>
   );
-}
-
-
-export default ErrorPage;
+};

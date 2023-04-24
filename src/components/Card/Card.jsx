@@ -2,15 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import PokeCard from "../Pokecard/Pokecard";
 import axios from "axios";
-import {
-  Cards,
-  ContainerScroll,
-} from "./CardStyles";
-    
+import { Cards, ContainerScroll } from "./CardStyles";
+
 const Card = (props) => {
-
   const [pokeList, setPokeList] = useState([]);
-
 
   const getAllPokeName = () => {
     axios
@@ -29,22 +24,20 @@ const Card = (props) => {
   }, []);
 
   const mapPokemons =
-  pokeList &&
-  pokeList.map((pokemon) => {
-    return (
-      <>
-        <PokeCard nome={pokemon.name} />
-      </> 
-    );
-  });
+    pokeList &&
+    pokeList.map((pokemon) => {
+      return (
+        <>
+          <PokeCard nome={pokemon.name} />
+        </>
+      );
+    });
 
   return (
     <>
       <ContainerScroll>
-        <Cards>
-        {mapPokemons}
-        </Cards>
-        </ContainerScroll>
+        <Cards>{mapPokemons}</Cards>
+      </ContainerScroll>
     </>
   );
 };

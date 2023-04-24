@@ -44,10 +44,6 @@ export const CardFather = styled.div`
     font-size: 20px;
     color: #ffffff26;
   }
-
-  h6 {
-    color: #fff;
-  }
 `;
 
 export const Imagem = styled.div`
@@ -80,9 +76,8 @@ export const CaptureButton = styled.div`
   img {
     width: 20%;
     user-select: none;
-
     filter: ${(props) =>
-      props.variant === true ? "contrast(15%)" : "saturate(100%) "};
+      props.variant === true ? "saturate(0)" : "saturate(100%)"};
   }
 `;
 
